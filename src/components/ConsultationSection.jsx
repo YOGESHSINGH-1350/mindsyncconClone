@@ -1,0 +1,35 @@
+import React from "react";
+
+const ConsultationSection = () => {
+  return (
+    <section className="flex items-center justify-center px-6 py-16 bg-white md:px-12 lg:px-24">
+      <div className="bg-gray-100 text-center rounded-lg shadow-lg p-8 md:p-12 lg:p-16 w-full max-w-5xl relative">
+        {/* Background Text */}
+        <h2 className="text-5xl  font-bold text-gray-900 relative inline-block">
+        <span className="absolute top-8 left-1/2 transform -translate-x-1/2 text-[#4F39F6] text-sm tracking-wide font-semibold">
+  LET’S CONSULTATION
+</span>
+
+          <span className="block text-transparent  bg-clip-text bg-gradient-to-b from-gray-700 to-gray-200">
+          CONSULTATION
+</span>
+
+        </h2>
+
+      
+
+        {/* Content */}
+        <div className="relative z-10 text-center">          
+          <h3 className="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">
+            Let’s Talk About Business Solutions <span className="text-indigo-600">With Us</span>
+          </h3>
+          <button className="mt-6 px-6 py-3 bg-indigo-600 text-white font-medium text-lg rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 flex items-center mx-auto">
+            CONTACT US →
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ConsultationSection;
