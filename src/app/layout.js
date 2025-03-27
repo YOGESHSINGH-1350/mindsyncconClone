@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import "./globals.css";
 import Footer from "@/components/Footter";
 import CustomCursor from "@/components/CustonCurrson";
+import SmoothScroll from "@/components/CircularScrollProgress";
 
 export const metadata = {
   title: "mindsynccon.com",
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
       <body className="">
         <Header/>
         <CustomCursor/>
+        <SmoothScroll/>
         {children}
         <Footer/>
       </body>

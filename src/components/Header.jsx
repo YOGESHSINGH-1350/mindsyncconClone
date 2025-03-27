@@ -124,7 +124,7 @@ export default function Header() {
             alt="MINDSYNC Logo"
             width={200}
             height={60}
-            className="h-12 md:h-16 w-auto filter invert"
+            className="h-12 md:h-16 w-auto filter bg-[#141D38] rounded-full shadow-lg"
             priority
           />
         </Link>
@@ -159,7 +159,7 @@ export default function Header() {
             </div>
           </div>
           
-          <Link href="/about-us" className="nav-item hover:text-[#684DF4] transition-colors">
+          <Link href="/aboutus" className="nav-item hover:text-[#684DF4] transition-colors">
             About Us
           </Link>
           <Link href="/contact-us" className="nav-item hover:text-[#684DF4] transition-colors">

@@ -1,89 +1,81 @@
 "use client";
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 
-const AboutSection = () => {
+
+import { PhoneCall } from "lucide-react"; // Call icon ke liye
+
+export default function AboutUs() {
   return (
-    <section className="py-16 px-4 md:py-20 bg-white">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        {/* Left Column - Image with Blob Shape */}
-        <div className="relative md:w-1/2 flex justify-center">
-          <div className="relative w-full max-w-md">
-            {/* Background abstract shapes */}
-            <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#684DF4] rounded-full opacity-40 blur-2xl" />
-            <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-[#684DF4] rounded-full opacity-40 blur-2xl" />
-
-            {/* Blob Shape for Image */}
-            <svg
-              viewBox="0 0 600 600"
-              className="absolute w-full h-full"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <clipPath id="blobClip">
-                <path
-                  d="M424.5,323.5Q407,397,339,429Q271,461,198.5,431Q126,401,88.5,330.5Q51,260,95,197.5Q139,135,201.5,114Q264,93,328,108.5Q392,124,419.5,192Q447,260,424.5,323.5Z"
-                />
-              </clipPath>
-              <image
-                href="/images/team.jpg"
-                width="600"
-                height="600"
-                clipPath="url(#blobClip)"
-              />
-            </svg>
+    <section className="relative flex items-center justify-center min-h-screen bg-white px-6 lg:px-24">
+      {/* Experience Badge */}
+      <div className="absolute -top-16   transform -translate-x-1/2 text-center">
+        <div className="relative w-45 h-45 flex items-center justify-center rounded-full bg-white shadow-lg">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full bg-[#684DF4] text-white text-6xl font-bold">
+            <span>15</span>
           </div>
+          <p className="absolute -mb-20 text-lg text-white">Years Experience</p>
+        </div>
+      </div>
+
+      {/* Content Container */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full max-w-7xl mx-auto">
+        
+        {/* Left Side - Image */}
+        <div className="flex justify-center">
+          <img 
+            src="/images/mindsync-logo.png" 
+            alt="Company Image" 
+            className="w-full max-w-lg rounded-lg shadow-lg bg-[#141D38] "
+          />
         </div>
 
-        {/* Right Column - Text Content */}
-        <div className="md:w-1/2">
-          <span className="text-[#684DF4] font-semibold tracking-wider">
-            ABOUT MINDSYNC CONSULTING
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-            We Are Increasing Business Success With{" "}
-            <span className="text-[#684DF4]">Technology</span>
+        {/* Right Side - Text Content */}
+        <div className="text-left">
+          <h2 className="text-6xl font-bold text-gray-900 relative inline-block mb-5">
+            <span className="absolute top-9 left-30 transform -translate-x-1/2 text-[#684DF4] text-xl tracking-wide font-semibold">
+              About us
+            </span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-b from-gray-800 to-gray-200 uppercase">
+              About US
+            </span>
           </h2>
-          <p className="text-gray-600 mb-6 leading-relaxed">
-            Mindsync Consulting empowers businesses to thrive by leveraging
-            advanced technology solutions. We enhance productivity, streamline
-            operations, and drive growth with tailored software, innovative
-            mobile apps, and expert UI/UX design.
+          <h2 className="text-3xl font-bold text-gray-900 leading-tight">
+            We Are Increasing Business Success With <span className="text-[#684DF4]">IT Solution</span>
+          </h2>
+          <p className="text-gray-600 mt-4">
+            Mindsync Consulting Pvt Ltd excels in Mobile Apps, UI/UX Design, Web Apps, Admin Dashboards, and SQA. Combining technical expertise and creative design to deliver tailored, high-quality software solutions for diverse business needs.
           </p>
 
-          {/* Award Winning Section */}
-          <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
-            <div className="flex items-center gap-4">
-              <Image
-                src="/images/award.jpg"
-                alt="Award Winning"
-                width={80}
-                height={80}
-                className="rounded-lg"
-              />
-              <div>
-                <h4 className="text-lg font-semibold">
-                  An Award-Winning Company.
-                </h4>
-                <p className="text-gray-500 text-sm">
-                  Mindsync Consulting, award-winning firm, excels in software,
-                  mobile apps, and UI/UX design, driving client success.
-                </p>
-              </div>
+          {/* Certification & Team Section */}
+          <div className="flex gap-8 mt-6 font-bold">
+            <div>
+              <h4 className="font-semibold text-black">Certified Company</h4>
+              <p className="text-gray-600 text-sm">Best Provide Skills Services</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-black">Expert Team</h4>
+              <p className="text-gray-600 text-sm">100% Expert Team</p>
             </div>
           </div>
 
-          {/* Button */}
-          <Link
-            href="/about"
-            className="inline-flex items-center gap-2 mt-6 bg-[#684DF4] text-white px-6 py-3 rounded-full hover:bg-[#141D38] transition-colors"
-          >
-            ABOUT MORE
-          </Link>
+          {/* Button & Call Section */}
+          <div className="mt-6 flex gap-6 items-center">
+            <button className="bg-[#684DF4] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#141D38] transition">
+              DISCOVER MORE →
+            </button>
+            <div className="relative flex items-center gap-2">
+              {/* Call Icon with Ripple Effect */}
+              <div className="relative w-12 h-12 flex items-center justify-center bg-[#684DF4] hover:bg-[#141D38] text-white rounded-full shadow-md">
+                <div className="absolute inset-0 ripplea  "></div>
+                <PhoneCall size={26} strokeWidth={2} />
+              </div>
+              <div>
+                <p className="text-gray-700 text-sm">Call Us On:</p>
+                <p className="text-lg font-semibold text-gray-900">+91-1143572646</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default AboutSection;
+}

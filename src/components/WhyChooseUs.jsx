@@ -53,7 +53,7 @@ const WhyChooseUs = () => {
       {/* Right Image */}
       <div className="md:w-1/2 flex justify-center relative mt-10 md:mt-0">
         <img
-          src="/images/whychooseus.png" // Replace this with actual image path
+          src="/images/whychooseus.png" 
           alt="Team Meeting"
           className="rounded-lg shadow-lg"
         />

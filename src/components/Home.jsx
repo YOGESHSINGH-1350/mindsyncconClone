@@ -17,7 +17,7 @@ const Home = () => {
     gsap.to(card, {
       rotateX: y,
       rotateY: x,
-      duration: 0.4,  // Fast but smooth
+      duration: 0.4,  
       ease: "power2.out",
     });
   };
@@ -26,7 +26,7 @@ const Home = () => {
     gsap.to(cardRef.current, {
       rotateX: 0,
       rotateY: 0,
-      duration: 0.5, // Thoda fast return
+      duration: 0.5, 
       ease: "power2.out",
     });
   };
@@ -69,7 +69,7 @@ const Home = () => {
               }}
             >
               <Image
-                src="/images/heroImg.png" // Ensure image is in public folder
+                src="/images/heroImg.png" 
                 alt="IT Service Solutions"
                 width={600}
                 height={400}

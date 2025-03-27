@@ -10,10 +10,10 @@ const CustomCursor = () => {
     const moveCursor = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
 
-      // Smooth effect ke liye delay create karo
+      
       setTimeout(() => {
         setOutlinePosition({ x: e.clientX, y: e.clientY });
-      }, 100); // Delay time (100ms)
+      }, 100); 
     };
 
     window.addEventListener("mousemove", moveCursor);
@@ -34,7 +34,7 @@ const CustomCursor = () => {
       <div
         className="cursor-outline"
         style={{
-          left: `${outlinePosition.x - 10}px`, // Offset for centering
+          left: `${outlinePosition.x - 10}px`, 
           top: `${outlinePosition.y - 10}px`,
         }}
       />

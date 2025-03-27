@@ -1,10 +1,11 @@
-import AboutSection from '@/components/AboutUs'
+import AboutSection from '@/components/AboutSection'
 import BlogSection from '@/components/BlogSection'
 import ConsultationSection from '@/components/ConsultationSection'
 import Home from '@/components/Home'
-import ProcessSteps from '@/components/ProcessSteps'
+import CircularScrollProgress from '@/components/CircularScrollProgress'
 import ServicesSection from '@/components/ServicesSection'
 import WhyChooseUs from '@/components/WhyChooseUs'
+import ProcessSteps from '@/components/ProcessSteps'
 
 import React from 'react'
 
@@ -16,6 +17,7 @@ function page() {
       <ServicesSection />
       <WhyChooseUs /> 
       <ProcessSteps />
+      <CircularScrollProgress />
       <ConsultationSection/>
       <BlogSection />
       
