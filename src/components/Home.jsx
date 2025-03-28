@@ -69,7 +69,7 @@ const Home = () => {
               }}
             >
               <Image
-                src="/images/heroImg.png" 
+                src="/images/hero.webp" 
                 alt="IT Service Solutions"
                 width={600}
                 height={400}

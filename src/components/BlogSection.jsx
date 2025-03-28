@@ -6,14 +6,14 @@ const blogs = [
     id: 1,
     title: 'The Future of AI Technology: Trends, Applications',
     desc: 'The Future of AI Technology: Trends, Applications, and Impacts Artificial',
-    img: '/images/RecentPost 1.png',
+    img: '/images/hr.webp',
     author: 'Mindsync',
   },
   {
     id: 2,
     title: 'Unstatiable entreaties may collecting Power.',
     desc: 'Rapidiously repurpose leading edge growth strategies with just in time',
-    img: '/images/RecentPost 2.png',
+    img: '/images/comp.webp',
     author: 'Mindsync',
   },
   {

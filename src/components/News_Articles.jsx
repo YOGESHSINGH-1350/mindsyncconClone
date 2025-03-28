@@ -80,7 +80,7 @@ export default function News_Articles() {
       <SwiperSlide key={post.id}>
         <div
           className="bg-white rounded-lg shadow-lg overflow-hidden p-0 
-          flex flex-col h-auto sm:h-[500px] w-full sm:w-[400px] md:w-[400px]"
+          flex flex-col h-auto sm:h-[500px] w-full sm:w-[400px] md:w-[400px] transform transition duration-700 hover:scale-95"
         >
           <Image
             src={post.image}

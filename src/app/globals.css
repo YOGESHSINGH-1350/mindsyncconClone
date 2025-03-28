@@ -11,11 +11,13 @@
   
   .nav-item:hover::before {
     @apply scale-100;
+    @apply transition duration-1000;
   }
   
   .nav-item:hover {
     @apply text-[#684DF4];
   }
+ 
   
   .cursor {
     width: 8px;
@@ -36,7 +38,7 @@
     position: fixed;
     pointer-events: none;
     z-index: 9998;
-    transition: transform 0.2s ease-out; /* Slower movement for delay effect */
+    transition: transform 0.0s ease-out; /* Slower movement for delay effect */
   }
   
   @keyframes rippleAnimation {

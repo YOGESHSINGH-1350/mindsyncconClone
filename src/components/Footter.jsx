@@ -161,13 +161,13 @@ const Footer = () => {
                   id: 1,
                   title: "How An HRPB Can Transform Your",
                   date: "Oct 22 2024",
-                  image: "/images/RecentPost 1.png"
+                  image: "/images/hr.webp"
                 },
                 {
                   id: 2,
                   title: "Enhancing Your Mobile App Development With",
                   date: "Aug 18 2023",
-                  image: "/images/RecentPost 2.png"
+                  image: "/images/comp.webp"
                 }
               ].map((post) => (
                 <li key={post.id}>
@@ -176,13 +176,13 @@ const Footer = () => {
                     className="text-sm text-white hover:text-[#684DF4] transition-colors block"
                   >
                     <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0">
+                      <div className="flex-shrink-0 ">
                         <Image
                           src={post.image}
                           alt="Recent Post"
-                          width={50}
-                          height={50}
-                          className="rounded-lg object-cover w-12 h-12"
+                          width={70}
+                          height={70}
+                          className="rounded-lg object-cover w-15 h-15 hover:scale-105 "
                         />
                       </div>
                       <div>

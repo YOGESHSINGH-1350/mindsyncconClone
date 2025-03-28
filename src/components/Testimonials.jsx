@@ -107,10 +107,9 @@ export default function Testimonial() {
           {testimonials.map((testi, index) => (
             <SwiperSlide key={index}>
               <div
-  className="bg-white shadow-lg p-6 sm:p-8 rounded-xl mx-auto 
-  h-auto flex flex-col justify-between w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl"
->
-
+                className="bg-white shadow-lg p-6 sm:p-8 rounded-xl mx-auto 
+                h-auto flex flex-col justify-between w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl transform transition duration-700 hover:scale-95"
+              >
                 <p className="text-gray-600 flex-grow text-sm sm:text-base">
                   {testi.feedback}
                 </p>

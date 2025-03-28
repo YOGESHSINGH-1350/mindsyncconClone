@@ -65,11 +65,11 @@ const AboutSection = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
             <div className="flex items-center gap-4">
               <Image
-                src="/images/award.jpg"
+                src="/images/mindsync-logo.png"
                 alt="Award Winning"
                 width={80}
                 height={80}
-                className="rounded-lg"
+                className="rounded-lg bg-[#141D38]"
               />
               <div>
                 <h4 className="text-lg font-semibold">

@@ -60,14 +60,14 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl transition-transform transform hover:scale-105 border border-gray-200"
+              className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl transform transition duration-600 hover:scale-105 border border-gray-200"
             >
               {/* Icon */}
               <div className="relative inline-block">
-                <div className="bg-[#4F39F6] w-16 h-16 flex items-center justify-center rounded-full relative">
+                <div className="bg-[#684DF4] w-16 h-16 flex items-center justify-center rounded-full relative">
                   {service.icon}
                 </div>
-                <div className="absolute -top-2 -left-2 w-20 h-20 bg-[#4F39F6] opacity-30 rounded-full blur-xl" />
+                <div className="absolute -top-2 -left-2 w-20 h-20 bg-[#684DF4] opacity-30 rounded-full blur-xl" />
               </div>
 
               {/* Content */}
@@ -77,7 +77,7 @@ const ServicesSection = () => {
               {/* Button */}
               <Link
                 href="/services"
-                className="inline-block mt-4 px-5 py-2 bg-[#4F39F6] text-white rounded-full text-sm font-medium hover:bg-[#141D38] transition-colors"
+                className="inline-block mt-4 px-5 py-2 bg-[#684DF4] text-white rounded-full text-sm font-medium hover:bg-[#141D38] transition-colors"
               >
                 READ MORE →
               </Link>
@@ -89,7 +89,7 @@ const ServicesSection = () => {
         <div className="mt-10">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 bg-[#4F39F6] text-white px-6 py-3 rounded-full hover:bg-[#141D38] transition-colors"
+            className="inline-flex items-center gap-2 bg-[#684DF4] text-white px-6 py-3 rounded-full hover:bg-[#141D38] transition-colors"
           >
             VIEW ALL SERVICES →
           </Link>

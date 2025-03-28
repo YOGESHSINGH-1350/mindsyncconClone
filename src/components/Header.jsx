@@ -2,6 +2,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { LuCircleArrowOutUpRight } from "react-icons/lu";
 import Image from "next/image";
 import {
   FaMapMarkerAlt,
@@ -49,21 +50,21 @@ export default function Header() {
   return (
     <header className={`sticky top-0 z-50 ${isScrolled ? "shadow-md" : ""}`}>
       {/* Top Header */}
-      <div className="bg-[#684DF4] text-white pr-20 pl-20 text-sm md:text-md py-4 md:py-4 px-4 flex flex-col md:flex-row justify-between items-center relative">
+      <div className="bg-[#684DF4] text-white  pr-20 pl-20 text-sm md:text-md py-4 md:py-4 px-4 flex flex-col md:flex-row justify-between items-center relative">
         {/* Contact Info - Hidden on medium and small screens */}
         <div className="hidden md:flex md:w-auto md:flex-row md:gap-4 items-center">
-          <span className="flex items-center gap-1 whitespace-nowrap">
+          <span className="flex items-center gap-1 whitespace-nowrap transform transition duration-700 hover:text-[#141D38]">
             <LuPhone size={14} /> <a href="tel:+911143572646">+91-1143572646</a>
           </span>
-          <span className="flex items-center gap-1">
+          <span className="flex items-center gap-1 ransform transition duration-700 hover:text-[#141D38]">
             | <IoLocationOutline size={14} />
             <a href="https://maps.app.goo.gl/bfvsUER2LkiAWYXX7">
               210-211, 2nd Floor, A-115 Vakil Chamber, Shakarpur, Delhi 110092
             </a>
           </span>
-          <span className="flex items-center gap-1 whitespace-nowrap">
+          <span className="flex items-center gap-1 whitespace-nowrap ransform transition duration-700 hover:text-[#141D38]">
             | <FaRegEnvelope size={14} />
-            <a href="mailto:sales@mindsynccon.com">sales@mindsynccon.com</a>
+            <a href="mailto:sales@mindsynccon.com ">sales@mindsynccon.com</a>
           </span>
         </div>
 
@@ -137,7 +138,7 @@ export default function Header() {
         }`}
       >
         {/* Logo */}
-        <Link href="/" className="flex-shrink-0 ml-0">
+        <Link href="/" className="flex-shrink-0 ml-0 transform transition duration-600 hover:scale-110">
           <Image
             src="/images/mindsync-logo.png"
             alt="MINDSYNC Logo"
@@ -184,7 +185,7 @@ export default function Header() {
                     key={index}
                     className="px-4 py-2 hover:bg-gray-100 flex items-center gap-2 text-sm"
                   >
-                    <span>{service.icon}</span> {service.name}
+                    <span className="text-[#684DF4] text-bold"> <LuCircleArrowOutUpRight/> </span> {service.name}
                   </li>
                 ))}
               </ul>
