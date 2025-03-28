@@ -36,15 +36,21 @@ const ServicesSection = () => {
     <section className="py-16 px-4 md:py-20 bg-gray-100">
       <div className="max-w-6xl mx-auto text-left">
         {/* Title */}
-        <h2 className="text-5xl font-bold text-gray-900 relative inline-block">
-          <span className="absolute top-8 left-18 transform -translate-x-1/2 text-[#4F39F6] text-sm tracking-wide font-semibold">
-            LATEST PROJECT
-          </span>
-          <span className="block text-transparent bg-clip-text bg-gradient-to-b from-gray-700 to-gray-200">
-  Services
-</span>
+        <h2 className="relative inline-block text-center text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-10">
+  
+  {/* CUSTOMER FEEDBACK - Middle Bottom of "Testimonial" */}
+  <span className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-3 text-[#684DF4] 
+                   text-base sm:text-lg md:text-xl tracking-wide font-semibold whitespace-nowrap">
+    Latest Projects
+  </span>
 
-        </h2>
+  {/* Main Heading */}
+  <span className="block text-transparent bg-clip-text bg-gradient-to-b from-gray-700 to-gray-200 uppercase">
+    Services
+  </span>
+
+</h2>
+
         <p className="text-[#4F39F6] font-bold text-3xl ml-18 mt-3">
           Your Business
         </p>

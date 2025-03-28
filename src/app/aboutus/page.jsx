@@ -1,6 +1,8 @@
 import AboutUs from "@/components/AboutUs";
+import News_Articles from "@/components/News_Articles";
 import StatsSection from "@/components/StatsSection";
-import WhyWeChooseUs from "@/components/WhyWeChooseUs";
+import Testimonials from "@/components/Testimonials";
+import WhyWeChooseUs from "@/components/WhyChooseUs";
 
 
 export default function AboutPage() {
@@ -9,5 +11,7 @@ export default function AboutPage() {
   <AboutUs />
   <StatsSection />
   <WhyWeChooseUs />
+  <Testimonials />
+  <News_Articles/>
   </>;
 }

@@ -21,9 +21,7 @@ const AboutSection = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <clipPath id="blobClip">
-                <path
-                  d="M424.5,323.5Q407,397,339,429Q271,461,198.5,431Q126,401,88.5,330.5Q51,260,95,197.5Q139,135,201.5,114Q264,93,328,108.5Q392,124,419.5,192Q447,260,424.5,323.5Z"
-                />
+                <path d="M424.5,323.5Q407,397,339,429Q271,461,198.5,431Q126,401,88.5,330.5Q51,260,95,197.5Q139,135,201.5,114Q264,93,328,108.5Q392,124,419.5,192Q447,260,424.5,323.5Z" />
               </clipPath>
               <image
                 href="/images/team.jpg"
@@ -37,9 +35,21 @@ const AboutSection = () => {
 
         {/* Right Column - Text Content */}
         <div className="md:w-1/2">
-          <span className="text-[#684DF4] font-semibold tracking-wider">
-            ABOUT MINDSYNC CONSULTING
-          </span>
+          <h2 className="relative inline-block text-center text-5xl sm:text-6xl md:text-6xl font-bold text-gray-900 mb-10">
+            {/* CUSTOMER FEEDBACK - Middle Bottom of "Testimonial" */}
+            <span
+              className="absolute left-1/2 bottom-1 transform -translate-x-1/2 translate-y-3 text-[#684DF4] 
+                   text-base sm:text-lg md:text-sm tracking-wide font-semibold whitespace-nowrap"
+            >
+              ABOUT MINDSYNC CONSULTING
+            </span>
+
+            {/* Main Heading */}
+            <span className="block text-transparent bg-clip-text bg-gradient-to-b from-gray-700 to-gray-200 uppercase">
+              MINDSYNC CONSULTING
+            </span>
+          </h2>
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6">
             We Are Increasing Business Success With{" "}
             <span className="text-[#684DF4]">Technology</span>

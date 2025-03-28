@@ -1,75 +1,61 @@
-"user strict";
+import Image from "next/image";
+import { FaCheck } from "react-icons/fa6";
+const features = [
+  { label: "Big Data Analysis" },
+  { label: "High Quality Security" },
+  { label: "24/7 Online Support" },
+  { label: "24/7 Expert Team" },
+  { label: "Business Improvement" },
+  { label: "Easy Solutions" },
+];
 
-import React from "react";
-
-const WhyChooseUs = () => {
+export default function WhyChooseUs() {
   return (
-    <section className="bg-gray-50 py-16 px-8 md:px-16 flex flex-col md:flex-row items-center">
-      {/* Left Content */}
-      <div className="md:w-1/2">
-      <h2 className="text-5xl font-bold text-gray-900 relative inline-block">
-          <span className="absolute top-6 left-25 transform -translate-x-1/2 text-[#684DF4] text-xl tracking-wide font-semibold">
-          whychooseus
-          </span>
-          <span className="block text-transparent bg-clip-text bg-gradient-to-b from-gray-800 to-gray-200 uppercase ">
-          Choose US
-</span>
+    <div className="bg-white py-20">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center px-6 lg:px-20">
+        {/* Left Content */}
+        <div className="lg:w-1/2 text-[#141D38] ">
+          <h2 className="relative inline-block text-left text-4xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-10">
+            {/* Main Heading */}
+            <span className="block text-transparent bg-clip-text bg-gradient-to-b from-gray-700 to-gray-200 uppercase">
+              Why Choose us
+            </span>
+          </h2>
 
-        </h2>
-        <h2 className="text-4xl font-bold text-gray-900 mt-2">
-          More Than <span className="text-[#684DF4]">15+ Years</span> Experience
-        </h2>
-        <h2 className="text-4xl font-bold text-gray-900">We Provide <span className="text-[#684DF4]">IT Services</span></h2>
-        <p className="text-gray-600 mt-4">
-          Choose Mindsync Consulting for expert IT solutions, comprehensive services,
-          authorized partnerships, quality assurance, client-centric approach,
-          innovative design, and tailored solutions. Trust us for reliable,
-          high-performance projects.
-        </p>
+          <h2 className="text-4xl font-bold">
+            We Deal With The Aspects <br /> Professional{" "}
+            <span className="text-[#684DF4]">IT Services</span>
+          </h2>
+          <p className="mt-4 text-lg text-gray-800">
+            Providing comprehensive solutions in software development, IT
+            consulting, system integration, and managed services to enhance
+            business efficiency and growth.
+          </p>
 
-        {/* Stats */}
-        <div className="flex gap-8 mt-6">
-          <div className="text-center">
-            <div className="w-20 h-20 rounded-full border-4 border-[#684DF4] flex items-center justify-center text-2xl font-bold text-black">
-              90%
-            </div>
-            <h4 className="text-xl font-semibold mt-2">Business Grow</h4>
-            <p className="text-gray-500 text-sm">Expert IT solutions driving business growth.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-20 h-20 rounded-full border-4 border-[#684DF4] flex items-center justify-center text-2xl font-bold text-black">
-              95%
-            </div>
-            <h4 className="text-xl font-semibold mt-2">Quality Products</h4>
-            <p className="text-gray-500 text-sm">Delivering top-quality, reliable IT solutions.</p>
+          {/* Feature List */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-center gap-3">
+                <div className="w-9 h-9 flex items-center justify-center border-dotted border-2 text-[#684DF4] rounded-full">
+                  <FaCheck />
+                </div>
+                <p className="font-semibold">{feature.label}</p>
+              </div>
+            ))}
           </div>
         </div>
 
-        <button className="mt-6 bg-[#684DF4] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#141D38] transition-all">
-          LEARN MORE →
-        </button>
+        {/* Right Image */}
+        <div className="lg:w-1/2 flex justify-center mt-10 lg:mt-0">
+          <Image
+            src="/images/mindsync-logo.png"
+            alt="Why we Choose Us"
+            width={500}
+            height={500}
+            className="hidden md:block w-[450px] h-auto object-cover rounded-lg shadow-lg bg-[#141D38]"
+          />
+        </div>
       </div>
-
-      {/* Right Image */}
-      <div className="md:w-1/2 flex justify-center relative mt-10 md:mt-0">
-        <img
-          src="/images/whychooseus.png" 
-          alt="Team Meeting"
-          className="rounded-lg shadow-lg"
-        />
-        <div className="absolute top-2 right-16 flex items-center justify-center">
-  <div className="w-35 h-35 rounded-full bg-[#E2E8FA] flex items-center justify-center">
-    <div className="w-30 h-30 bg-[#684DF4] text-white rounded-full flex flex-col items-center justify-center shadow-lg">
-      <span className="text-xl font-bold">10+</span> 
-      <span className="text-xs">Active Clients</span>
     </div>
-  </div>
-</div>
-
-
-      </div>
-    </section>
   );
-};
-
-export default WhyChooseUs;
+}

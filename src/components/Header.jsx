@@ -28,13 +28,13 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    document.body.style.overflow = menuOpen ? 'auto' : 'hidden';
+    document.body.style.overflow = menuOpen ? "auto" : "hidden";
   };
 
   const services = [
@@ -43,11 +43,11 @@ export default function Header() {
     { icon: "🖥️", name: "Software Development" },
     { icon: "🔗", name: "Blockchain Development" },
     { icon: "🛒", name: "E-Commerce Solutions" },
-    { icon: "🎨", name: "UI/UX Design" }
+    { icon: "🎨", name: "UI/UX Design" },
   ];
 
   return (
-    <header className={`sticky top-0 z-50 ${isScrolled ? 'shadow-md' : ''}`}>
+    <header className={`sticky top-0 z-50 ${isScrolled ? "shadow-md" : ""}`}>
       {/* Top Header */}
       <div className="bg-[#684DF4] text-white pr-20 pl-20 text-sm md:text-md py-4 md:py-4 px-4 flex flex-col md:flex-row justify-between items-center relative">
         {/* Contact Info - Hidden on medium and small screens */}
@@ -66,7 +66,7 @@ export default function Header() {
             <a href="mailto:sales@mindsynccon.com">sales@mindsynccon.com</a>
           </span>
         </div>
-        
+
         {/* Social Icons - Always visible but centered on medium/small screens */}
         <div className="flex gap-3 items-center mx-auto md:mx-0 md:self-auto">
           <a
@@ -75,7 +75,10 @@ export default function Header() {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <FaLinkedinIn size={16} className="hover:scale-110 transition-transform" />
+            <FaLinkedinIn
+              size={16}
+              className="hover:scale-110 transition-transform"
+            />
           </a>
           <a
             href="https://www.facebook.com/people/Mindsync-Consulting/61561371143355/"
@@ -83,7 +86,10 @@ export default function Header() {
             rel="noopener noreferrer"
             aria-label="Facebook"
           >
-            <FaFacebookF size={16} className="hover:scale-110 transition-transform" />
+            <FaFacebookF
+              size={16}
+              className="hover:scale-110 transition-transform"
+            />
           </a>
           <a
             href="https://x.com/mindsyncc"
@@ -91,19 +97,28 @@ export default function Header() {
             rel="noopener noreferrer"
             aria-label="Twitter"
           >
-            <FaTwitter size={16} className="hover:scale-110 transition-transform" />
+            <FaTwitter
+              size={16}
+              className="hover:scale-110 transition-transform"
+            />
           </a>
         </div>
 
         {/* Contact Info - Only visible on small screens when expanded */}
-        <div className={`w-full md:hidden mt-2 ${menuOpen ? 'block' : 'hidden'}`}>
+        <div
+          className={`w-full md:hidden mt-2 ${menuOpen ? "block" : "hidden"}`}
+        >
           <div className="flex flex-col space-y-1 text-xs">
             <span className="flex items-center gap-1">
-              <LuPhone size={12} /> <a href="tel:+911143572646">+91-1143572646</a>
+              <LuPhone size={12} />{" "}
+              <a href="tel:+911143572646">+91-1143572646</a>
             </span>
             <span className="flex items-center gap-1">
               <IoLocationOutline size={12} />
-              <a href="https://maps.app.goo.gl/bfvsUER2LkiAWYXX7" className="truncate">
+              <a
+                href="https://maps.app.goo.gl/bfvsUER2LkiAWYXX7"
+                className="truncate"
+              >
                 Shakarpur, Delhi 110092
               </a>
             </span>
@@ -116,7 +131,11 @@ export default function Header() {
       </div>
 
       {/* Main Navbar */}
-      <div className={`bg-[#EEF1F9] py-2 md:py-3 px-4 flex justify-between items-center transition-all ${isScrolled ? 'py-1' : ''}`}>
+      <div
+        className={`bg-[#EEF1F9] py-2 md:py-3 px-4 flex justify-between items-center transition-all ${
+          isScrolled ? "py-1" : ""
+        }`}
+      >
         {/* Logo */}
         <Link href="/" className="flex-shrink-0 ml-0">
           <Image
@@ -131,48 +150,68 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-4 lg:gap-6 text-black font-medium items-center relative z-10">
-          <Link href="/" className="nav-item hover:text-[#684DF4] transition-colors">
+          <Link
+            href="/"
+            className="nav-item hover:text-[#684DF4] transition-colors"
+          >
             Home
           </Link>
-          
+
           <div className="relative group">
             <button
               onMouseEnter={() => setIsOpen(true)}
               onMouseLeave={() => setIsOpen(false)}
               className="nav-item hover:text-[#684DF4] transition-colors flex items-center gap-1"
             >
-              Services <IoIosArrowDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+              Services{" "}
+              <IoIosArrowDown
+                className={`w-3 h-3 transition-transform ${
+                  isOpen ? "rotate-180" : ""
+                }`}
+              />
             </button>
 
-            <div 
-              className={`absolute top-full left-0 bg-white shadow-lg rounded-lg w-64 py-2 z-20 ${isOpen ? 'block' : 'hidden'} group-hover:block`}
+            <div
+              className={`absolute top-full left-0 bg-white shadow-lg rounded-lg w-64 py-2 z-20 ${
+                isOpen ? "block" : "hidden"
+              } group-hover:block`}
               onMouseEnter={() => setIsOpen(true)}
               onMouseLeave={() => setIsOpen(false)}
             >
               <ul>
                 {services.map((service, index) => (
-                  <li key={index} className="px-4 py-2 hover:bg-gray-100 flex items-center gap-2 text-sm">
+                  <li
+                    key={index}
+                    className="px-4 py-2 hover:bg-gray-100 flex items-center gap-2 text-sm"
+                  >
                     <span>{service.icon}</span> {service.name}
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-          
-          <Link href="/aboutus" className="nav-item hover:text-[#684DF4] transition-colors">
+
+          <Link
+            href="/aboutus"
+            className="nav-item hover:text-[#684DF4] transition-colors"
+          >
             About Us
           </Link>
-          <Link href="/contact-us" className="nav-item hover:text-[#684DF4] transition-colors">
+          <Link
+            href="/contactus"
+            className="nav-item hover:text-[#684DF4] transition-colors"
+          >
             Contact Us
           </Link>
         </nav>
 
         {/* Appointment Button (Desktop) */}
         <Link
-          href="/contact-us"
+          href="/contactus"
           className="hidden md:flex items-center gap-1 bg-[#684DF4] text-white px-4 py-2 md:px-6 md:py-3 rounded-full hover:bg-[#141D38] transition-colors whitespace-nowrap"
         >
-          Make Appointment<FaLongArrowAltRight className="ml-1" />
+          Make Appointment
+          <FaLongArrowAltRight className="ml-1" />
         </Link>
 
         {/* Mobile Menu Button */}
@@ -207,8 +246,8 @@ export default function Header() {
 
         {/* Sidebar Menu Items */}
         <nav className="mt-4 flex flex-col space-y-2 px-4 text-black">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="flex items-center gap-2 py-3 px-4 hover:bg-gray-100 rounded transition-colors"
             onClick={toggleMenu}
           >
@@ -224,13 +263,19 @@ export default function Header() {
               <span className="flex items-center gap-2">
                 <IoIosArrowForward className="text-[#684DF4]" /> Services
               </span>
-              <span className={`text-[#684DF4] transition-transform ${isServicesOpen ? 'rotate-45' : ''}`}>+</span>
+              <span
+                className={`text-[#684DF4] transition-transform ${
+                  isServicesOpen ? "rotate-45" : ""
+                }`}
+              >
+                +
+              </span>
             </button>
-            
+
             {isServicesOpen && (
               <div className="ml-6 mb-2 space-y-1">
                 {services.map((service, index) => (
-                  <Link 
+                  <Link
                     key={index}
                     href="#"
                     className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50 rounded transition-colors"
@@ -243,28 +288,29 @@ export default function Header() {
             )}
           </div>
 
-          <Link 
-            href="/about-us" 
+          <Link
+            href="/aboutus"
             className="flex items-center gap-2 py-3 px-4 hover:bg-gray-100 rounded transition-colors"
             onClick={toggleMenu}
           >
             <IoIosArrowForward className="text-[#684DF4]" /> About Us
           </Link>
-          <Link 
-            href="/contact-us" 
+          <Link
+            href="/contactus"
             className="flex items-center gap-2 py-3 px-4 hover:bg-gray-100 rounded transition-colors"
             onClick={toggleMenu}
           >
             <IoIosArrowForward className="text-[#684DF4]" /> Contact Us
           </Link>
-          
+
           {/* Mobile Appointment Button */}
           <Link
-            href="/contact-us"
+            href="/contactus"
             className="mt-4 flex items-center justify-center gap-1 bg-[#684DF4] text-white px-6 py-3 rounded-full hover:bg-[#141D38] transition-colors"
             onClick={toggleMenu}
           >
-            Make Appointment<FaLongArrowAltRight className="ml-1" />
+            Make Appointment
+            <FaLongArrowAltRight className="ml-1" />
           </Link>
         </nav>
       </div>

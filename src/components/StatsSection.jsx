@@ -8,20 +8,28 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <div className="bg-[#684DF4] py-20 mb-10">
-      <div className="container mx-auto flex justify-center gap-12">
+    <div className="bg-[#684DF4] py-14 sm:py-20 mb-6 sm:mb-10">
+      <div className="container mx-auto flex flex-wrap justify-center gap-8 sm:gap-12 px-4 sm:px-0">
         {stats.map((stat, index) => (
-          <div key={index} className="flex flex-col items-center">
+          <div key={index} className="flex flex-col items-center w-36 sm:w-44">
             <div className="relative">
-              <div className="absolute -top-4 left-1 w-5 h-5 bg-white rounded-full shadow-lg animate-bounce"></div>
-              <div className="relative w-28 h-28 flex items-center justify-center">
-                <div className="absolute w-32 h-32 bg-white rounded-full shadow-lg"></div>
+              <div className="absolute -top-2 sm:-top-4 left-1 w-3 h-3 sm:w-5 sm:h-5 bg-white rounded-full shadow-lg animate-bounce"></div>
+              <div className="relative w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center">
+                <div className="absolute w-28 h-28 sm:w-32 sm:h-32 bg-white rounded-full shadow-lg"></div>
                 {/* Dynamically changing image */}
-                <Image src={stat.image} alt={stat.label} width={50} height={50} className="relative z-10 object-cover w-full h-full" />
+                <Image
+                  src={stat.image}
+                  alt={stat.label}
+                  width={40}
+                  height={40}
+                  className="relative z-10 object-contain w-10 h-10 sm:w-12 sm:h-12"
+                />
               </div>
             </div>
-            <h2 className="text-white text-3xl font-bold mt-3">{stat.value}</h2>
-            <p className="text-white text-lg">{stat.label}</p>
+            <h2 className="text-white text-2xl sm:text-3xl font-bold mt-2 sm:mt-3">
+              {stat.value}
+            </h2>
+            <p className="text-white text-sm sm:text-lg text-center">{stat.label}</p>
           </div>
         ))}
       </div>

@@ -4,7 +4,7 @@ import ConsultationSection from '@/components/ConsultationSection'
 import Home from '@/components/Home'
 import CircularScrollProgress from '@/components/CircularScrollProgress'
 import ServicesSection from '@/components/ServicesSection'
-import WhyChooseUs from '@/components/WhyChooseUs'
+import WhyChooseUs from '@/components/ChooseUs'
 import ProcessSteps from '@/components/ProcessSteps'
 
 import React from 'react'
